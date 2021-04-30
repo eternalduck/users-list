@@ -18,7 +18,7 @@ const UserCard = props => {
 	// Get current user by userID from slug - FAIL
 	useEffect(() => {
 		const getCurrentUser = () => {
-			const found = users.find(u => u.id === 3)//userID FAILS here, wtf??
+			const found = users.find(u => u.id === 1)//userID FAILS here, wtf??
 			setCurrentUser(c => c = found)
 		}
 		if (users) {
