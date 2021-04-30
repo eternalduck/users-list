@@ -1,0 +1,25 @@
+$body-bg: #282c34;
+$body-txt: #fff;
+
+@mixin border {
+	border: 1px solid #555;
+	border-radius: 10px;
+}
+
+@mixin centered {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+$breakpoints: (
+				sm: "600px",
+				md: "960px",
+				lg: "1280px",
+				xl: "1920px"
+);
+
+@mixin breakUp($breakpoint) {
+	@media screen and (min-width: #{map-get($breakpoints, $breakpoint)}) {
+		@content;
+	}
+}

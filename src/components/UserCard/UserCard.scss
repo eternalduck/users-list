@@ -1,0 +1,40 @@
+@import '../../scss/vars-mixins';
+
+.user-card {
+	max-width: 600px;
+	margin-top: 100px;
+	padding: 50px 30px;
+	@include centered;
+	@include border;
+	&__row {
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+	}
+
+	&__label {
+		flex: 0 0 15%;
+		margin-right: 30px;
+	}
+
+	&__button-wrap {
+		margin-top: 80px;
+		button:first-child {
+			margin-right: 50px;
+		}
+	}
+	select {
+		flex: 0 0 50%;
+		height: 40px;
+		font-size: 16px;
+	}
+	//tmp hacks, not for prod ofc)
+	.MuiInput-underline {
+		color: #fff;
+		flex: 0 0 50%;
+	}
+	.MuiInput-underline:before {
+		border-color: #fff;
+	}
+	//hacks
+}
