@@ -20,8 +20,11 @@
 
 	&__button-wrap {
 		margin-top: 80px;
-		button:first-child {
-			margin-right: 50px;
+		button {
+			margin-bottom: 15px;
+			&:first-child {
+				margin-right: 50px;
+			}
 		}
 	}
 	&__error {
