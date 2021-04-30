@@ -9,7 +9,7 @@ const UserList = () => {
 	const {users, setUsers} = useContext(UserContext)
 	const {isLoading, setIsLoading} = useContext(UserContext)
 
-	// Delete entry
+	// Delete entry:
 	const deleteUser = (thisid) => {
 		console.info(`id ${thisid} deleted`)
 		setUsers(users => users.filter(u => u.id !== thisid))

@@ -7,7 +7,6 @@
 	margin-bottom: 40px;
 	padding: 20px;
 	@include border;
-	@include centered;
 
 	&__info {
 		flex: 2;

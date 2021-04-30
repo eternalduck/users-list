@@ -2,11 +2,6 @@
 
 .sort {
 	margin-bottom: 40px;
-	text-align: center;
-	@include breakUp("md") {
-		position: absolute;
-		top: 70px;
-	}
 
 	button {
 		color: #fff;

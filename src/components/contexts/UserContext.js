@@ -6,7 +6,7 @@ export const UserContextProvider = ({children}) => {
 	const [users, setUsers] = useState(undefined)
 	const [isLoading, setIsLoading] = useState(false)
 
-	// Fetch users
+	// Fetch users:
 	useEffect(() => {
 		const fetchUsers = async () => {
 			setIsLoading(true)
@@ -19,7 +19,7 @@ export const UserContextProvider = ({children}) => {
 				console.error("aaa fetch failed!")
 			}
 		}
-		// Call fetch or get users from localStorage (in case of page refresh, failed to implement as appropriate..)
+		// Call fetch or get users from localStorage (in case of page refresh, failed to implement as appropriate..):
 		// let storage = localStorage.getItem("usersList")
 		// if (storage === null || storage === "undefined") {
 			fetchUsers()
@@ -29,7 +29,7 @@ export const UserContextProvider = ({children}) => {
 		// }
 	}, [])
 
-	// Update storage on users change
+	// Update storage on users change:
 	// useEffect(() => {
 	// 	localStorage.setItem("usersList", JSON.stringify(users))
 	// }, [users])

@@ -6,7 +6,7 @@ import "./Sort.scss"
 const Sort = props => {
 	const {users, setUsers} = useContext(UserContext)
 
-	// User list sorting
+	// User list sorting:
 	const [isUsersSorted, setIsUsersSorted] = useState(false)
 
 	const sortUsers = (() => {
@@ -22,7 +22,7 @@ const Sort = props => {
 				setIsUsersSorted(false)
 			}
 		}
-	})()//end sorting
+	})()
 
 
 	return (
