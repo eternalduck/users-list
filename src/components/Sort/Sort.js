@@ -1,7 +1,6 @@
 import {useContext, useState} from "react"
 import UserContext from "../contexts/UserContext"
 import Button from "@material-ui/core/Button"
-import "./Sort.scss"
 
 const Sort = props => {
 	const {users, setUsers} = useContext(UserContext)
@@ -12,7 +11,8 @@ const Sort = props => {
 	const sortUsers = (() => {
 		return {
 			sortList: function () {
-				const sortedList = users.sort((a, b) => (a.name > b.name ? 1 : -1))
+				const usersCopy = users
+				const sortedList = usersCopy.sort((a, b) => (a.name > b.name ? 1 : -1))
 				setUsers([...sortedList])
 				setIsUsersSorted(true)
 			},
@@ -24,13 +24,10 @@ const Sort = props => {
 		}
 	})()
 
-
 	return (
 		<div className={"sort"}>
 			<Button variant="outlined"
-				onClick={() =>
-						isUsersSorted ? sortUsers.unsortList() : sortUsers.sortList()
-				}
+				onClick={isUsersSorted ? sortUsers.unsortList : sortUsers.sortList}
 			>
 				{isUsersSorted ? "Sort by ID" : "Sort by name"}
 			</Button>

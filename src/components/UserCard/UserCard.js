@@ -1,6 +1,7 @@
 import {useContext, useEffect, useState} from "react"
 import {useParams} from "react-router-dom"
 import UserContext, {UserContextConsumer} from "../contexts/UserContext"
+// import WithContext from "../contexts/UserContextConsumer"
 import TextInput from "../Input/Input"
 import Dropdown from "../Dropdown/Dropdown"
 import Container from "@material-ui/core/Container"
@@ -18,7 +19,7 @@ const UserCard = props => {
 	// Get current user by userID from slug - FAIL
 	useEffect(() => {
 		const getCurrentUser = () => {
-			const found = users.find(u => u.id === 1)//userID FAILS here, wtf??
+			const found = users.find(u => u.id === 1)//userID FAIL
 			setCurrentUser(c => c = found)
 		}
 		if (users) {
@@ -144,3 +145,4 @@ const UserCard = props => {
 }
 
 export default UserCard
+// export default WithContext(UserCard)
